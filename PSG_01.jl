@@ -14,11 +14,11 @@ for i in 2:nrow(df)
   if df[i, :machinekey] != current_machine
     gap[i] = 0
     last_end = df[i,:mss_end]
-    current_machine = df[1,:machinekey]
+    current_machine = df[i,:machinekey]
     continue
   end
   gap[i] = df[i,:mss_begin] - last_end
-  if !(gap[i] > 0)
+  if !(gap[i] >= 0)
     println(STDERR, "Error at row ", i, " gap is zero or negative.")
     exit(-1)
   end
