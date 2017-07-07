@@ -25,4 +25,24 @@ for i in 2:nrow(df)
   last_end = df[i,:mss_end]
 end
 df[:gap] = gap
+function cossim(a,b)
+  dot(a,b)/(vecnorm(a)*vecnorm(b))
+end
+
+function session_similarity(x::Int)
+  a = Array(df[x,[:cashplayed,	:cashin, :ticketin, :bet_freq, :avg_bet]])
+  b = Array(df[x+1,[:cashplayed,	:cashin, :ticketin, :bet_freq, :avg_bet]])
+  return cossim(a,b)
+end
+function session_similarity(x::UnitRange{Int})
+  return_array = Array{Float64}(0)
+  for y in x
+    a = Array(df[y,[:cashplayed,	:cashin, :ticketin, :bet_freq, :avg_bet]])
+    b = Array(df[y+1,[:cashplayed,	:cashin, :ticketin, :bet_freq, :avg_bet]])
+    push!(return_array, cossim(a,b))
+  end
+  return return_array
+end
+
+
 writetable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv", df)
