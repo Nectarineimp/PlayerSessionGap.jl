@@ -9,283 +9,288 @@
      stroke-width="0.3"
      font-size="3.88"
 >
-<g stroke="#000000" stroke-opacity="0.000" fill="#222831" id="img-817de1bc-1">
+<g stroke="#000000" stroke-opacity="0.000" fill="#FDF5E6" id="img-7da0a834-1">
   <rect x="0" y="0" width="254" height="127"/>
 </g>
-<g class="plotroot xscalable yscalable" id="img-817de1bc-2">
-  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#A1A1A1" stroke="#000000" stroke-opacity="0.000" id="img-817de1bc-3">
-    <text x="133.75" y="115.39" text-anchor="middle" dy="0.6em">x</text>
+<g class="plotroot xscalable yscalable" id="img-7da0a834-2">
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-7da0a834-3">
+    <text x="135.49" y="115.39" text-anchor="middle" dy="0.6em">Hour</text>
   </g>
-  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#A1A1A1" id="img-817de1bc-4">
-    <text x="20.5" y="108.72" text-anchor="middle" dy="0.6em">0</text>
-    <text x="65.8" y="108.72" text-anchor="middle" dy="0.6em">5</text>
-    <text x="111.1" y="108.72" text-anchor="middle" dy="0.6em">10</text>
-    <text x="156.4" y="108.72" text-anchor="middle" dy="0.6em">15</text>
-    <text x="201.7" y="108.72" text-anchor="middle" dy="0.6em">20</text>
+  <g class="guide xlabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-7da0a834-4">
+    <text x="23.98" y="108.72" text-anchor="middle" dy="0.6em">0</text>
+    <text x="68.58" y="108.72" text-anchor="middle" dy="0.6em">5</text>
+    <text x="113.19" y="108.72" text-anchor="middle" dy="0.6em">10</text>
+    <text x="157.79" y="108.72" text-anchor="middle" dy="0.6em">15</text>
+    <text x="202.4" y="108.72" text-anchor="middle" dy="0.6em">20</text>
     <text x="247" y="108.72" text-anchor="middle" dy="0.6em">25</text>
   </g>
-<g clip-path="url(#img-817de1bc-5)">
-  <g id="img-817de1bc-6">
-    <g pointer-events="visible" opacity="1" fill="#222831" stroke="#000000" stroke-opacity="0.000" class="guide background" id="img-817de1bc-7">
-      <rect x="18.5" y="5" width="230.5" height="102.72"/>
+<g clip-path="url(#img-7da0a834-5)">
+  <g id="img-7da0a834-6">
+    <g pointer-events="visible" opacity="1" fill="#FFFFFF" stroke="#00008B" class="guide background" id="img-7da0a834-7">
+      <rect x="21.98" y="10.61" width="227.02" height="97.1"/>
     </g>
-    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#575757" id="img-817de1bc-8">
-      <path fill="none" d="M18.5,105.72 L 249 105.72"/>
-      <path fill="none" d="M18.5,81.04 L 249 81.04"/>
-      <path fill="none" d="M18.5,56.36 L 249 56.36"/>
-      <path fill="none" d="M18.5,31.68 L 249 31.68"/>
-      <path fill="none" d="M18.5,7 L 249 7"/>
+    <g class="guide ygridlines xfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-7da0a834-8">
+      <path fill="none" d="M21.98,105.71 L 249 105.71"/>
+      <path fill="none" d="M21.98,87.09 L 249 87.09"/>
+      <path fill="none" d="M21.98,68.47 L 249 68.47"/>
+      <path fill="none" d="M21.98,49.85 L 249 49.85"/>
+      <path fill="none" d="M21.98,31.23 L 249 31.23"/>
+      <path fill="none" d="M21.98,12.61 L 249 12.61"/>
     </g>
-    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#575757" id="img-817de1bc-9">
-      <path fill="none" d="M20.5,5 L 20.5 107.72"/>
-      <path fill="none" d="M65.8,5 L 65.8 107.72"/>
-      <path fill="none" d="M111.1,5 L 111.1 107.72"/>
-      <path fill="none" d="M156.4,5 L 156.4 107.72"/>
-      <path fill="none" d="M201.7,5 L 201.7 107.72"/>
-      <path fill="none" d="M247,5 L 247 107.72"/>
+    <g class="guide xgridlines yfixed" stroke-dasharray="0.5,0.5" stroke-width="0.2" stroke="#D0D0E0" id="img-7da0a834-9">
+      <path fill="none" d="M23.98,10.61 L 23.98 107.72"/>
+      <path fill="none" d="M68.58,10.61 L 68.58 107.72"/>
+      <path fill="none" d="M113.19,10.61 L 113.19 107.72"/>
+      <path fill="none" d="M157.79,10.61 L 157.79 107.72"/>
+      <path fill="none" d="M202.4,10.61 L 202.4 107.72"/>
+      <path fill="none" d="M247,10.61 L 247 107.72"/>
     </g>
-    <g class="plotpanel" id="img-817de1bc-10">
-      <g class="geometry color_RGB{Float32}(0.9960785f0,0.2627451f0,0.39607847f0)" stroke-width="0.3" stroke="#CE0042" id="img-817de1bc-11">
-        <path fill="none" d="M19,36.71 L 22 36.71"/>
-        <path fill="none" d="M28.06,27.51 L 31.06 27.51"/>
-        <path fill="none" d="M37.12,73.27 L 40.12 73.27"/>
-        <path fill="none" d="M46.18,79.72 L 49.18 79.72"/>
-        <path fill="none" d="M55.24,80.08 L 58.24 80.08"/>
-        <path fill="none" d="M64.3,77.03 L 67.3 77.03"/>
-        <path fill="none" d="M73.36,100.54 L 76.36 100.54"/>
-        <path fill="none" d="M82.42,74.28 L 85.42 74.28"/>
-        <path fill="none" d="M91.48,73.52 L 94.48 73.52"/>
-        <path fill="none" d="M100.54,70.69 L 103.54 70.69"/>
-        <path fill="none" d="M109.6,70.95 L 112.6 70.95"/>
-        <path fill="none" d="M118.66,66.63 L 121.66 66.63"/>
-        <path fill="none" d="M127.72,69.84 L 130.72 69.84"/>
-        <path fill="none" d="M136.78,35.45 L 139.78 35.45"/>
-        <path fill="none" d="M145.84,35.07 L 148.84 35.07"/>
-        <path fill="none" d="M154.9,32.08 L 157.9 32.08"/>
-        <path fill="none" d="M163.96,32.43 L 166.96 32.43"/>
-        <path fill="none" d="M173.02,32.44 L 176.02 32.44"/>
-        <path fill="none" d="M182.08,33.11 L 185.08 33.11"/>
-        <path fill="none" d="M191.14,33.26 L 194.14 33.26"/>
-        <path fill="none" d="M200.2,33.52 L 203.2 33.52"/>
-        <path fill="none" d="M209.26,33.21 L 212.26 33.21"/>
-        <path fill="none" d="M218.32,33.04 L 221.32 33.04"/>
-        <path fill="none" d="M227.38,34.34 L 230.38 34.34"/>
-        <path fill="none" d="M20.5,33.87 L 20.5 36.71"/>
-        <path fill="none" d="M29.56,24.56 L 29.56 27.51"/>
-        <path fill="none" d="M38.62,69.41 L 38.62 73.27"/>
-        <path fill="none" d="M47.68,75.12 L 47.68 79.72"/>
-        <path fill="none" d="M56.74,74.53 L 56.74 80.08"/>
-        <path fill="none" d="M65.8,70.41 L 65.8 77.03"/>
-        <path fill="none" d="M74.86,92.8 L 74.86 100.54"/>
-        <path fill="none" d="M83.92,66.51 L 83.92 74.28"/>
-        <path fill="none" d="M92.98,66.18 L 92.98 73.52"/>
-        <path fill="none" d="M102.04,64.49 L 102.04 70.69"/>
-        <path fill="none" d="M111.1,65.81 L 111.1 70.95"/>
-        <path fill="none" d="M120.16,62.29 L 120.16 66.63"/>
-        <path fill="none" d="M129.22,65.92 L 129.22 69.84"/>
-        <path fill="none" d="M138.28,32.22 L 138.28 35.45"/>
-        <path fill="none" d="M147.34,32.07 L 147.34 35.07"/>
-        <path fill="none" d="M156.4,29.25 L 156.4 32.08"/>
-        <path fill="none" d="M165.46,29.66 L 165.46 32.43"/>
-        <path fill="none" d="M174.52,29.75 L 174.52 32.44"/>
-        <path fill="none" d="M183.58,30.47 L 183.58 33.11"/>
-        <path fill="none" d="M192.64,30.68 L 192.64 33.26"/>
-        <path fill="none" d="M201.7,31.01 L 201.7 33.52"/>
-        <path fill="none" d="M210.76,30.76 L 210.76 33.21"/>
-        <path fill="none" d="M219.82,30.54 L 219.82 33.04"/>
-        <path fill="none" d="M228.88,31.74 L 228.88 34.34"/>
-        <path fill="none" d="M19,33.87 L 22 33.87"/>
-        <path fill="none" d="M28.06,24.56 L 31.06 24.56"/>
-        <path fill="none" d="M37.12,69.41 L 40.12 69.41"/>
-        <path fill="none" d="M46.18,75.12 L 49.18 75.12"/>
-        <path fill="none" d="M55.24,74.53 L 58.24 74.53"/>
-        <path fill="none" d="M64.3,70.41 L 67.3 70.41"/>
-        <path fill="none" d="M73.36,92.8 L 76.36 92.8"/>
-        <path fill="none" d="M82.42,66.51 L 85.42 66.51"/>
-        <path fill="none" d="M91.48,66.18 L 94.48 66.18"/>
-        <path fill="none" d="M100.54,64.49 L 103.54 64.49"/>
-        <path fill="none" d="M109.6,65.81 L 112.6 65.81"/>
-        <path fill="none" d="M118.66,62.29 L 121.66 62.29"/>
-        <path fill="none" d="M127.72,65.92 L 130.72 65.92"/>
-        <path fill="none" d="M136.78,32.22 L 139.78 32.22"/>
-        <path fill="none" d="M145.84,32.07 L 148.84 32.07"/>
-        <path fill="none" d="M154.9,29.25 L 157.9 29.25"/>
-        <path fill="none" d="M163.96,29.66 L 166.96 29.66"/>
-        <path fill="none" d="M173.02,29.75 L 176.02 29.75"/>
-        <path fill="none" d="M182.08,30.47 L 185.08 30.47"/>
-        <path fill="none" d="M191.14,30.68 L 194.14 30.68"/>
-        <path fill="none" d="M200.2,31.01 L 203.2 31.01"/>
-        <path fill="none" d="M209.26,30.76 L 212.26 30.76"/>
-        <path fill="none" d="M218.32,30.54 L 221.32 30.54"/>
-        <path fill="none" d="M227.38,31.74 L 230.38 31.74"/>
+    <g class="plotpanel" id="img-7da0a834-10">
+      <g class="geometry color_RGB{Float32}(0.0f0,0.0f0,0.54509807f0)" stroke-width="0.3" stroke="#000064" id="img-7da0a834-11">
+        <path fill="none" d="M22.48,97.86 L 25.48 97.86"/>
+        <path fill="none" d="M31.4,70.87 L 34.4 70.87"/>
+        <path fill="none" d="M40.32,71.22 L 43.32 71.22"/>
+        <path fill="none" d="M49.24,58.39 L 52.24 58.39"/>
+        <path fill="none" d="M58.16,65.68 L 61.16 65.68"/>
+        <path fill="none" d="M67.08,64.7 L 70.08 64.7"/>
+        <path fill="none" d="M76,63.01 L 79 63.01"/>
+        <path fill="none" d="M84.92,79.5 L 87.92 79.5"/>
+        <path fill="none" d="M93.85,74.82 L 96.85 74.82"/>
+        <path fill="none" d="M102.77,70.87 L 105.77 70.87"/>
+        <path fill="none" d="M111.69,73.19 L 114.69 73.19"/>
+        <path fill="none" d="M120.61,71.53 L 123.61 71.53"/>
+        <path fill="none" d="M129.53,69.95 L 132.53 69.95"/>
+        <path fill="none" d="M138.45,95.87 L 141.45 95.87"/>
+        <path fill="none" d="M147.37,104.9 L 150.37 104.9"/>
+        <path fill="none" d="M156.29,98.33 L 159.29 98.33"/>
+        <path fill="none" d="M165.21,103.26 L 168.21 103.26"/>
+        <path fill="none" d="M174.13,102.47 L 177.13 102.47"/>
+        <path fill="none" d="M183.05,97.66 L 186.05 97.66"/>
+        <path fill="none" d="M191.97,104.48 L 194.97 104.48"/>
+        <path fill="none" d="M200.9,102.47 L 203.9 102.47"/>
+        <path fill="none" d="M209.82,99.63 L 212.82 99.63"/>
+        <path fill="none" d="M218.74,86.56 L 221.74 86.56"/>
+        <path fill="none" d="M227.66,93.9 L 230.66 93.9"/>
+        <path fill="none" d="M23.98,80.31 L 23.98 97.86"/>
+        <path fill="none" d="M32.9,51.71 L 32.9 70.87"/>
+        <path fill="none" d="M41.82,50.66 L 41.82 71.22"/>
+        <path fill="none" d="M50.74,34.56 L 50.74 58.39"/>
+        <path fill="none" d="M59.66,36.62 L 59.66 65.68"/>
+        <path fill="none" d="M68.58,29.81 L 68.58 64.7"/>
+        <path fill="none" d="M77.5,24.38 L 77.5 63.01"/>
+        <path fill="none" d="M86.42,38.14 L 86.42 79.5"/>
+        <path fill="none" d="M95.35,36.67 L 95.35 74.82"/>
+        <path fill="none" d="M104.27,38.58 L 104.27 70.87"/>
+        <path fill="none" d="M113.19,46.67 L 113.19 73.19"/>
+        <path fill="none" d="M122.11,48.82 L 122.11 71.53"/>
+        <path fill="none" d="M131.03,49.59 L 131.03 69.95"/>
+        <path fill="none" d="M139.95,76.25 L 139.95 95.87"/>
+        <path fill="none" d="M148.87,86.48 L 148.87 104.9"/>
+        <path fill="none" d="M157.79,80.67 L 157.79 98.33"/>
+        <path fill="none" d="M166.71,85.95 L 166.71 103.26"/>
+        <path fill="none" d="M175.63,85.64 L 175.63 102.47"/>
+        <path fill="none" d="M184.55,81.26 L 184.55 97.66"/>
+        <path fill="none" d="M193.47,88.41 L 193.47 104.48"/>
+        <path fill="none" d="M202.4,86.78 L 202.4 102.47"/>
+        <path fill="none" d="M211.32,84.16 L 211.32 99.63"/>
+        <path fill="none" d="M220.24,70.8 L 220.24 86.56"/>
+        <path fill="none" d="M229.16,77.57 L 229.16 93.9"/>
+        <path fill="none" d="M22.48,80.31 L 25.48 80.31"/>
+        <path fill="none" d="M31.4,51.71 L 34.4 51.71"/>
+        <path fill="none" d="M40.32,50.66 L 43.32 50.66"/>
+        <path fill="none" d="M49.24,34.56 L 52.24 34.56"/>
+        <path fill="none" d="M58.16,36.62 L 61.16 36.62"/>
+        <path fill="none" d="M67.08,29.81 L 70.08 29.81"/>
+        <path fill="none" d="M76,24.38 L 79 24.38"/>
+        <path fill="none" d="M84.92,38.14 L 87.92 38.14"/>
+        <path fill="none" d="M93.85,36.67 L 96.85 36.67"/>
+        <path fill="none" d="M102.77,38.58 L 105.77 38.58"/>
+        <path fill="none" d="M111.69,46.67 L 114.69 46.67"/>
+        <path fill="none" d="M120.61,48.82 L 123.61 48.82"/>
+        <path fill="none" d="M129.53,49.59 L 132.53 49.59"/>
+        <path fill="none" d="M138.45,76.25 L 141.45 76.25"/>
+        <path fill="none" d="M147.37,86.48 L 150.37 86.48"/>
+        <path fill="none" d="M156.29,80.67 L 159.29 80.67"/>
+        <path fill="none" d="M165.21,85.95 L 168.21 85.95"/>
+        <path fill="none" d="M174.13,85.64 L 177.13 85.64"/>
+        <path fill="none" d="M183.05,81.26 L 186.05 81.26"/>
+        <path fill="none" d="M191.97,88.41 L 194.97 88.41"/>
+        <path fill="none" d="M200.9,86.78 L 203.9 86.78"/>
+        <path fill="none" d="M209.82,84.16 L 212.82 84.16"/>
+        <path fill="none" d="M218.74,70.8 L 221.74 70.8"/>
+        <path fill="none" d="M227.66,77.57 L 230.66 77.57"/>
       </g>
-      <g stroke-width="0.3" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#FE4365" id="img-817de1bc-12">
-        <path fill="none" d="M29.56,47.46 L 38.62 57.76 47.68 65.86 56.74 71.94 65.8 75.94 74.86 78.01 83.92 77.92 92.98 75.78 102.04 71.6 111.1 65.89 120.16 59.07 129.22 52.16 138.28 46.31 147.34 40.97 156.4 36.86 165.46 33.78 174.52 31.45 183.58 29.94 192.64 29.33 201.7 29.56 210.76 30.66 219.82 32.6 228.88 35.36"/>
+      <g stroke-width="0.3" fill="#000000" fill-opacity="0.000" class="geometry" stroke-dasharray="none" stroke="#00008B" id="img-7da0a834-12">
+        <path fill="none" d="M32.9,68.55 L 41.82 61.67 50.74 56.37 59.66 52.54 68.58 50.26 77.5 49.44 86.42 50.22 95.35 52.5 104.27 56.14 113.19 60.91 122.11 66.5 131.03 72.55 139.95 78.37 148.87 83.74 157.79 87.91 166.71 90.84 175.63 92.84 184.55 93.76 193.47 93.59 202.4 92.37 211.32 90.04 220.24 86.61 229.16 82.05"/>
       </g>
-      <g class="geometry" id="img-817de1bc-13">
-        <g class="color_RGBA{Float32}(0.9960785f0,0.2627451f0,0.39607847f0,1.0f0)" stroke-width="0.3" id="img-817de1bc-14">
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-15">
-            <use xlink:href="#img-817de1bc-16" x="228.88" y="33.04"/>
+      <g class="geometry" id="img-7da0a834-13">
+        <g class="color_RGBA{Float32}(0.0f0,0.0f0,0.54509807f0,1.0f0)" stroke-width="0.3" id="img-7da0a834-14">
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-15">
+            <use xlink:href="#img-7da0a834-16" x="229.16" y="85.73"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-17">
-            <use xlink:href="#img-817de1bc-18" x="219.82" y="31.79"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-17">
+            <use xlink:href="#img-7da0a834-18" x="220.24" y="78.68"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-19">
-            <use xlink:href="#img-817de1bc-20" x="210.76" y="31.98"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-19">
+            <use xlink:href="#img-7da0a834-20" x="211.32" y="91.9"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-21">
-            <use xlink:href="#img-817de1bc-22" x="201.7" y="32.26"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-21">
+            <use xlink:href="#img-7da0a834-22" x="202.4" y="94.62"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-23">
-            <use xlink:href="#img-817de1bc-24" x="192.64" y="31.97"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-23">
+            <use xlink:href="#img-7da0a834-24" x="193.47" y="96.44"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-25">
-            <use xlink:href="#img-817de1bc-26" x="183.58" y="31.79"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-25">
+            <use xlink:href="#img-7da0a834-26" x="184.55" y="89.46"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-27">
-            <use xlink:href="#img-817de1bc-28" x="174.52" y="31.1"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-27">
+            <use xlink:href="#img-7da0a834-28" x="175.63" y="94.05"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-29">
-            <use xlink:href="#img-817de1bc-30" x="165.46" y="31.04"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-29">
+            <use xlink:href="#img-7da0a834-30" x="166.71" y="94.6"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-31">
-            <use xlink:href="#img-817de1bc-32" x="156.4" y="30.66"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-31">
+            <use xlink:href="#img-7da0a834-32" x="157.79" y="89.5"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-33">
-            <use xlink:href="#img-817de1bc-34" x="147.34" y="33.57"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-33">
+            <use xlink:href="#img-7da0a834-34" x="148.87" y="95.69"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-35">
-            <use xlink:href="#img-817de1bc-36" x="138.28" y="33.83"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-35">
+            <use xlink:href="#img-7da0a834-36" x="139.95" y="86.06"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-37">
-            <use xlink:href="#img-817de1bc-38" x="129.22" y="67.88"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-37">
+            <use xlink:href="#img-7da0a834-38" x="131.03" y="59.77"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-39">
-            <use xlink:href="#img-817de1bc-40" x="120.16" y="64.46"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-39">
+            <use xlink:href="#img-7da0a834-40" x="122.11" y="60.18"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-41">
-            <use xlink:href="#img-817de1bc-42" x="111.1" y="68.38"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-41">
+            <use xlink:href="#img-7da0a834-42" x="113.19" y="59.93"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-43">
-            <use xlink:href="#img-817de1bc-44" x="102.04" y="67.59"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-43">
+            <use xlink:href="#img-7da0a834-44" x="104.27" y="54.72"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-45">
-            <use xlink:href="#img-817de1bc-46" x="92.98" y="69.85"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-45">
+            <use xlink:href="#img-7da0a834-46" x="95.35" y="55.75"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-47">
-            <use xlink:href="#img-817de1bc-48" x="83.92" y="70.4"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-47">
+            <use xlink:href="#img-7da0a834-48" x="86.42" y="58.82"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-49">
-            <use xlink:href="#img-817de1bc-50" x="74.86" y="96.67"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-49">
+            <use xlink:href="#img-7da0a834-50" x="77.5" y="43.69"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-51">
-            <use xlink:href="#img-817de1bc-52" x="65.8" y="73.72"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-51">
+            <use xlink:href="#img-7da0a834-52" x="68.58" y="47.25"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-53">
-            <use xlink:href="#img-817de1bc-54" x="56.74" y="77.31"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-53">
+            <use xlink:href="#img-7da0a834-54" x="59.66" y="51.15"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-55">
-            <use xlink:href="#img-817de1bc-56" x="47.68" y="77.42"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-55">
+            <use xlink:href="#img-7da0a834-56" x="50.74" y="46.48"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-57">
-            <use xlink:href="#img-817de1bc-58" x="38.62" y="71.34"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-57">
+            <use xlink:href="#img-7da0a834-58" x="41.82" y="60.94"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-59">
-            <use xlink:href="#img-817de1bc-60" x="29.56" y="26.03"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-59">
+            <use xlink:href="#img-7da0a834-60" x="32.9" y="61.29"/>
           </g>
-          <g stroke="#B58486" fill="#FE4365" id="img-817de1bc-61">
-            <use xlink:href="#img-817de1bc-62" x="20.5" y="35.29"/>
+          <g stroke="#FFFFFF" fill="#00008B" id="img-7da0a834-61">
+            <use xlink:href="#img-7da0a834-62" x="23.98" y="89.09"/>
           </g>
         </g>
       </g>
     </g>
   </g>
 </g>
-  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#A1A1A1" id="img-817de1bc-63">
-    <text x="17.5" y="105.72" text-anchor="end" dy="0.35em">0.70</text>
-    <text x="17.5" y="81.04" text-anchor="end" dy="0.35em">0.75</text>
-    <text x="17.5" y="56.36" text-anchor="end" dy="0.35em">0.80</text>
-    <text x="17.5" y="31.68" text-anchor="end" dy="0.35em">0.85</text>
-    <text x="17.5" y="7" text-anchor="end" dy="0.35em">0.90</text>
+  <g class="guide ylabels" font-size="2.82" font-family="'PT Sans Caption','Helvetica Neue','Helvetica',sans-serif" fill="#6C606B" id="img-7da0a834-63">
+    <text x="20.98" y="105.71" text-anchor="end" dy="0.35em">0.685</text>
+    <text x="20.98" y="87.09" text-anchor="end" dy="0.35em">0.690</text>
+    <text x="20.98" y="68.47" text-anchor="end" dy="0.35em">0.695</text>
+    <text x="20.98" y="49.85" text-anchor="end" dy="0.35em">0.700</text>
+    <text x="20.98" y="31.23" text-anchor="end" dy="0.35em">0.705</text>
+    <text x="20.98" y="12.61" text-anchor="end" dy="0.35em">0.710</text>
   </g>
-  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#A1A1A1" stroke="#000000" stroke-opacity="0.000" id="img-817de1bc-64">
-    <text x="8.81" y="56.36" text-anchor="end" dy="0.35em">y</text>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-7da0a834-64">
+    <text x="8.81" y="57.16" text-anchor="middle" dy="0.35em" transform="rotate(-90, 8.81, 59.16)">Percent</text>
+  </g>
+  <g font-size="3.88" font-family="'PT Sans','Helvetica Neue','Helvetica',sans-serif" fill="#564A55" stroke="#000000" stroke-opacity="0.000" id="img-7da0a834-65">
+    <text x="135.49" y="5" text-anchor="middle" dy="0.6em">Mean likelihood of stickiness by hour</text>
   </g>
 </g>
 <defs>
-  <clipPath id="img-817de1bc-5">
-  <path d="M18.5,5 L 249 5 249 107.72 18.5 107.72" />
+  <clipPath id="img-7da0a834-5">
+  <path d="M21.98,10.61 L 249 10.61 249 107.72 21.98 107.72" />
 </clipPath>
-  <g id="img-817de1bc-16">
+  <g id="img-7da0a834-16">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-18">
+  <g id="img-7da0a834-18">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-20">
+  <g id="img-7da0a834-20">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-22">
+  <g id="img-7da0a834-22">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-24">
+  <g id="img-7da0a834-24">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-26">
+  <g id="img-7da0a834-26">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-28">
+  <g id="img-7da0a834-28">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-30">
+  <g id="img-7da0a834-30">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-32">
+  <g id="img-7da0a834-32">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-34">
+  <g id="img-7da0a834-34">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-36">
+  <g id="img-7da0a834-36">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-38">
+  <g id="img-7da0a834-38">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-40">
+  <g id="img-7da0a834-40">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-42">
+  <g id="img-7da0a834-42">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-44">
+  <g id="img-7da0a834-44">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-46">
+  <g id="img-7da0a834-46">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-48">
+  <g id="img-7da0a834-48">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-50">
+  <g id="img-7da0a834-50">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-52">
+  <g id="img-7da0a834-52">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-54">
+  <g id="img-7da0a834-54">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-56">
+  <g id="img-7da0a834-56">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-58">
+  <g id="img-7da0a834-58">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-60">
+  <g id="img-7da0a834-60">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
-  <g id="img-817de1bc-62">
+  <g id="img-7da0a834-62">
     <circle cx="0" cy="0" r="0.9"/>
   </g>
 </defs>

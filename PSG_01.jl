@@ -5,6 +5,8 @@
 using DataFrames, DataArrays
 df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap.csv")
 
+medians = [mean(df[:,:cashin]), mean(df[:,:ticketin]), mean(df[:,:bet_freq]), mean(df[:,:avg_bet])]
+factors = 1 ./ (medians ./ maximum(medians))
 function cossim(a,b)
   dot(a,b)/(vecnorm(a)*vecnorm(b))
 end
@@ -12,22 +14,18 @@ end
 function session_similarity(x::Int)
   if !(x>1 && x<=nrow(df))
     println(STDERR, "Index value must be > 1 and less than or equal to ", nrow(df))
-    exit(-1)
+    return -1.0
   end
-  a = Array(df[x-1,[:cashin, :ticketin, :bet_freq, :avg_bet]])
-  b = Array(df[x,[:cashin, :ticketin, :bet_freq, :avg_bet]])
-  a = [a[1] + a[2], a[3], a[4]]
-  b = [b[1] + b[2], b[3], b[4]]
+  a = vec(Array(df[x-1,[:cashin, :ticketin, :bet_freq, :avg_bet]])) .* factors
+  b = vec(Array(df[x,[:cashin, :ticketin, :bet_freq, :avg_bet]])) .* factors
   return cossim(a,b)
 end
 
 function session_similarity(x::UnitRange{Int})
   return_array = Array{Float64}(0)
   for y in x
-    a = Array(df[y,[:cashin, :ticketin, :bet_freq, :avg_bet]])
-    b = Array(df[y+1,[:cashin, :ticketin, :bet_freq, :avg_bet]])
-    a = [a[1] + a[2], a[3], a[4]]
-    b = [b[1] + b[2], b[3], b[4]]
+    a = vec(Array(df[y-1,[:cashin, :ticketin, :bet_freq, :avg_bet]])) .* factors
+    b = vec(Array(df[y,[:cashin, :ticketin, :bet_freq, :avg_bet]])) .* factors
     push!(return_array, cossim(a,b))
   end
   return return_array
