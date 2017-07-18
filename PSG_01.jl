@@ -3,7 +3,7 @@
 #####
 
 using DataFrames, DataArrays
-df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap.csv")
+df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis.csv")
 
 medians = [mean(df[:,:cashin]), mean(df[:,:ticketin]), mean(df[:,:bet_freq]), mean(df[:,:avg_bet])]
 factors = 1 ./ (medians ./ maximum(medians))
@@ -77,4 +77,4 @@ df[:similarity] = similarity
 df[:day] = day
 df[:hour] = hour
 
-writetable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv", df)
+# writetable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv", df)

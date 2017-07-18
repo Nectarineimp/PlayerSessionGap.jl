@@ -53,16 +53,17 @@ end
 function group_bins{T}(df::AbstractDataFrame, col::T, limits::StepRangeLen{Float64})
     n_bins = length(limits) + 1
 
-    vbins = find_bins(df[col], limits)
-    (idx, starts) = DataArrays.groupsort_indexer(vbins, n_bins)
-
-    # Remove zero-length groupings
-    starts = unique(starts)
-    ends = [starts[2:end] - 1]
-    GroupedDataFrame(df, [col], idx, starts[1:end-1], ends)
+    df[:idx] = find_bins(df[col], limits)
+    return groupby(df, :idx)
+    # (idx, starts) = DataArrays.groupsort_indexer(vbins, n_bins)
+    #
+    # # Remove NA groupings
+    # starts = unique(starts)
+    # ends = [starts[2:end] - 1]
+    # #GroupedDataFrame(df, [col], idx, starts[1:end-1], ends)
+    # groupby(df, [col], idx, starts[1:end-1], ends)
 end
 
-x = [0.62, 0.99, 0.52, 0.03, 0.55, 0.74, 0.49, 0.31, 0.62, 0.19]
-x_df = DataFrame(X=x, Y=rand(10))
+x_df = DataFrame(X=randn(30), Y=rand(30))
 
-group_bins(x_df, :X, range(0.0, 0.5, 20))
+find_bins(x_df[:X], Array(range(0.0, 0.5, 21)))
