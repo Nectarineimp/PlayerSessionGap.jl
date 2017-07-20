@@ -59,6 +59,8 @@ draw(PNG("GapAnalysis_byhour.png", 6inch, 4inch), P1)
 stay_seconds = by(df[df[:idx] .> 90, :], :hour, x->quantile(x[:gap],[0.5]))
 change_seconds = by(df[df[:idx] .< 25, :], :hour, x->quantile(x[:gap],[0.5]))
 
+stay_seconds_bydayhour = by(df[df[:idx] .> 90, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
+change_seconds_bydayhour = by(df[df[:idx] .< 25, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
 # Plot 2, hour by hour and day by day. More sophisticated. Proves we need a
 # 24x7 grid vs just an hour by hour array of thresholds.
 
