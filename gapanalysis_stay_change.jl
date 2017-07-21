@@ -79,10 +79,13 @@ draw(PNG("GapAnalysis_bydayhour.png", 6inch, 8inch), P2)
 stay_gapmean = by(df[df[:similarity] .> 0.90,:], [:day, :hour], x -> [quantile(x[:gap],[0.5]) std(x[:gap])])
 Ns = by(df[df[:similarity] .> 0.90,:], [:day, :hour], x-> size(x)[1])
 stay_ymaxes = Array{Float64}(7,24)
+stay_ymaxes2 = Array{Float64}(7,24)
 stay_ymins = Array{Float64}(7,24)
 for d in 1:7, h in 1:24
   i = (stay_gapmean[:day] .== d) .&  (stay_gapmean[:hour] .== (h-1))
   stay_ymaxes[d,h] = stay_gapmean[i,:x1][1] + (1.96 * stay_gapmean[i,:x2][1]) / sqrt(Ns[i,:x1][1])
+  stay_ymaxes2[d,h] = stay_gapmean[i,:x1][1] + 1.5*(1.96 * stay_gapmean[i,:x2][1]) / sqrt(Ns[i,:x1][1])
+  if stay_ymaxes2[d,h] > 300 stay_ymaxes2[d,h] = 300 end
   stay_ymins[d,h] = stay_gapmean[i,:x1][1] - (1.96 * stay_gapmean[i,:x2][1]) / sqrt(Ns[i,:x1][1])
 end
 
@@ -106,7 +109,7 @@ change_layer = layer(change_gapmean[change_gapmean[:day] .== 6, :],
   x=0:23, y=:x1, ymin=change_ymins[6,:], ymax=change_ymaxes[6,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"purple"))
-smooth_layer = layer(x=0:23, y=stay_ymaxes[6,:], Geom.smooth(method=:loess,smoothing=0.9))
+smooth_layer = layer(x=0:23, y=stay_ymaxes2[6,:], Geom.smooth(method=:loess, smoothing=0.9))
 P3 = plot(stay_layer, change_layer, smooth_layer, Theme(background_color=colorant"old lace"),
   Guide.title("Player Session Gap Analysis"),
   Guide.XLabel("Hour of Day"),
