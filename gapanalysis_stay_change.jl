@@ -98,15 +98,16 @@ end
 
 ### Plotting
 
-stay_layer = layer(stay_gapmean[change_gapmean[:day] .== 6,:],
+stay_layer = layer(stay_gapmean[change_gapmean[:day] .== 6, :],
   x=0:23, y=:x1, ymin=stay_ymins[6,:], ymax=stay_ymaxes[6,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"orange"))
-change_layer = layer(change_gapmean[change_gapmean[:day] .== 6,:],
+change_layer = layer(change_gapmean[change_gapmean[:day] .== 6, :],
   x=0:23, y=:x1, ymin=change_ymins[6,:], ymax=change_ymaxes[6,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"purple"))
-P3 = plot(stay_layer, change_layer, Theme(background_color=colorant"old lace"),
+smooth_layer = layer(x=0:23, y=stay_ymaxes[6,:], Geom.smooth(method=:loess,smoothing=0.9))
+P3 = plot(stay_layer, change_layer, smooth_layer, Theme(background_color=colorant"old lace"),
   Guide.title("Player Session Gap Analysis"),
   Guide.XLabel("Hour of Day"),
   Guide.YLabel("Typical Gap Time (Seconds)"),
