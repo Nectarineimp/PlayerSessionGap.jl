@@ -35,7 +35,7 @@ for i in 1:length(change_cumsum) if change_cumsum[i] >= change_mid return i end 
 StatsBase.summarystats(df[df[:idx] .== 19, :gap])
 StatsBase.summarystats(df[df[:idx] .== 93, :gap])
 change_gap = by(df[df[:idx] .< 25, :], :hour, x->median(x[:gap]))
-Stay_gap = by(df[df[:idx] .> 75, :], :hour, x->median(x[:gap]))
+Stay_gap = by(df[df[:idx] .> 90, :], :hour, x->median(x[:gap]))
 
 ###
 # Start plotting the results
