@@ -32,8 +32,8 @@ stay_cumsum = cumsum(counts(sample(df[df[:similarity] .> 0.989,:idx], 10000), 92
 for i in 1:length(stay_cumsum) if stay_cumsum[i] >= stay_mid return i end end
 for i in 1:length(change_cumsum) if change_cumsum[i] >= change_mid return i end end
 
-sim_stay = 99
-sim_change= 20
+sim_stay = 85
+sim_change = 25
 ###
 # Now let's look at the values to get a clearer understanding
 ###
@@ -108,15 +108,15 @@ end
 
 ### Plotting
 
-stay_layer = layer(stay_gapmean[change_gapmean[:day] .== 6, :],
-  x=0:23, y=:x1, ymin=stay_ymins[6,:], ymax=stay_ymaxes[6,:],
+stay_layer = layer(stay_gapmean[stay_gapmean[:day] .== 4, :],
+  x=0:23, y=:x1, ymin=stay_ymins[4,:], ymax=stay_ymaxes[4,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"orange"))
-change_layer = layer(change_gapmean[change_gapmean[:day] .== 6, :],
-  x=0:23, y=:x1, ymin=change_ymins[6,:], ymax=change_ymaxes[6,:],
+change_layer = layer(change_gapmean[change_gapmean[:day] .== 4, :],
+  x=0:23, y=:x1, ymin=change_ymins[4,:], ymax=change_ymaxes[4,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"purple"))
-smooth_layer = layer(x=0:23, y=stay_ymaxes2[6,:], Geom.smooth(method=:loess, smoothing=0.9))
+smooth_layer = layer(x=0:23, y=stay_ymaxes2[4,:], Geom.smooth(method=:loess, smoothing=0.85))
 P3 = plot(stay_layer, change_layer, smooth_layer, Theme(background_color=colorant"old lace"),
   Guide.title("Player Session Gap Analysis"),
   Guide.XLabel("Hour of Day"),
@@ -129,3 +129,23 @@ draw(PNG("GapAnalysis_bydayhour_final.png", 6inch, 8inch), P3)
 #####
 ### Achievement Unlocked! <bing!>
 #####
+function estimate_session_gap()
+  # if the stay top error index is below the change error index
+  # then process normally
+  return_array = Array{Float64}(7,24)
+  for day in 1:7, hour in 1:24
+    change_mean = (change_gapmean[(change_gapmean[:hour] .== hour-1) .& (change_gapmean[:day] .== day), :x1])[1]
+    change_min = change_ymins[day,hour]
+    stay_mean = (stay_gapmean[(stay_gapmean[:hour] .== hour-1) .& (stay_gapmean[:day] .== day), :x1])[1]
+    stay_max = stay_ymaxes[day,hour]
+    if stay_max <= change_min # no collistion in error
+      return_array[day,hour] = 300.0 < (change_min - stay_max)/2 + stay_max ? 300.0 : (change_min - stay_max)/2 + stay_max
+    else
+      # colision in error, find point between means
+      return_array[day,hour] = 300.0 < (change_mean - stay_mean)/2 + stay_mean ? 300.0 : (change_mean - stay_mean)/2 + stay_mean
+    end
+  end
+  return return_array
+end
+
+Base.writedlm("Array_Midsized.csv", estimate_session_gap(), ",")
