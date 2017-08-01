@@ -16,17 +16,21 @@ change_cumsum = cumsum(counts(sample(df[df[:similarity] .< 0.25,:idx], 10000), 0
 stay_mid = sum(counts(sample(df[df[:similarity] .> 0.90,:idx], 10000), 75:100))/2
 stay_cumsum = cumsum(counts(sample(df[df[:similarity] .> 0.90,:idx], 10000), 75:100))
 
-stay_gapmean = by(df[df[:similarity] .> 0.90,:], [:day, :hour], x -> [quantile(x[:gap],[0.5]) std(x[:gap])])
-Stay_gap = by(df[df[:idx] .> 90, :], :hour, x->median(x[:gap]))
-stay_seconds_bydayhour = by(df[df[:idx] .> 90, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
+sim_stay = 99
+sim_change= 20
 
-change_gap = by(df[df[:idx] .< 25, :], :hour, x->median(x[:gap]))
-change_seconds_bydayhour = by(df[df[:idx] .< 25, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
+Stay_gap = by(df[df[:similarity] .> sim_stay/100, :], :hour, x->median(x[:gap]))
+stay_seconds_bydayhour = by(df[df[:similarity] .> sim_stay/100, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
 
-Ns_stay = by(df[df[:similarity] .> 0.90,:], [:day, :hour], x-> size(x)[1])
+change_gap = by(df[df[:similarity] .< sim_change/100, :], :hour, x->median(x[:gap]))
+change_seconds_bydayhour = by(df[df[:similarity] .< sim_change/100, :], [:day, :hour], x->quantile(x[:gap],[0.5]))
+
+Ns_stay = by(df[df[:similarity] .> sim_stay/100,:], [:day, :hour], x-> size(x)[1])
 stay_ymaxes = Array{Float64}(7,24)
 stay_ymins = Array{Float64}(7,24)
 
-function array(df::AbstractDataFrame, σmultiple::Float, which="top")
-  ###
-end
+P1= plot(stay_seconds_bydayhour, x="hour", y="x1", Geom.point, color="day",
+  Guide.title(string("Durant c:", sim_change, " s:", sim_stay)),
+  Guide.YLabel("Seconds Wait Time"),
+  Guide.XLabel("By Hour"))
+draw(PNG("Gap_stay_bydayhour.png", 8inch, 6inch), P1)

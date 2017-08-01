@@ -12,7 +12,8 @@ using DataFrames, DataArrays
 # for details on how it was made.
 ###
 
-df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis.csv")
+# df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis.csv")
+df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis_Midsized.csv")
 
 #####
 ### This is critical - this is how we smooth out the results. All of the elements
@@ -26,6 +27,7 @@ df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis.csv")
 #####
 
 medians = [mean(df[:,:cashin]), mean(df[:,:ticketin]), mean(df[:,:bet_freq]), mean(df[:,:avg_bet])]
+
 factors = 1 ./ (medians ./ maximum(medians))
 
 #####
