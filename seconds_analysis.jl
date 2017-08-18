@@ -3,8 +3,10 @@
 #####
 # requires nothing, so long as PSG_01.jl was run.
 # experiment with various factors
-import "DataFrameBinning.jl"
-df = readcsv("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv")
+using Gadfly
+
+include("DataFrameBinning.jl")
+df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv")
 
 σ1 = 1
 σ2 = 2
@@ -16,7 +18,7 @@ change_cumsum = cumsum(counts(sample(df[df[:similarity] .< 0.25,:idx], 10000), 0
 stay_mid = sum(counts(sample(df[df[:similarity] .> 0.90,:idx], 10000), 75:100))/2
 stay_cumsum = cumsum(counts(sample(df[df[:similarity] .> 0.90,:idx], 10000), 75:100))
 
-sim_stay = 99
+sim_stay = 90
 sim_change= 20
 
 Stay_gap = by(df[df[:similarity] .> sim_stay/100, :], :hour, x->median(x[:gap]))

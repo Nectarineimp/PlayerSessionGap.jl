@@ -7,7 +7,12 @@
 ### test similarity to see if there are major differences between days. This
 ### should not vary much.
 #####
-df = readcsv("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv")
+
+# using DataFrames
+# df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/playersessiongap_post.csv")
+### uncomment above if you are running this after having already run PSG_01.jl and are
+### simply developing new code. Saves several minutes.
+
 for i in 1:7
   println("on day ", i, " similarity is ", quantile(df[df[:day] .== i, :similarity], [0.05, 0.10, 0.15, 0.20, 0.80, 0.90, 0.95]))
 end
@@ -15,29 +20,41 @@ end
 #####
 ### bin the similarity data into 1% sized bins
 ### create other metrics that will be used. Assumption, 25%/75% is a good
-### starting point for
+### starting point for dividing the data in to players we are certain
+### are the same person, and players we are certain are different.
 #####
 include( "./DataFrameBinning.jl" )
 df[:idx] = find_bins(df[:similarity], range(0.0,0.01,101))
-change_mid = sum(counts(sample(df[df[:similarity] .< 0.20,:idx], 10000), 0:20))/2
-change_cumsum = cumsum(counts(sample(df[df[:similarity] .< 0.20,:idx], 10000), 0:20))
-stay_mid = sum(counts(sample(df[df[:similarity] .> 0.989,:idx], 10000), 92:102))/2
-stay_cumsum = cumsum(counts(sample(df[df[:similarity] .> 0.989,:idx], 10000), 92:102))
+change_mid = sum(counts(sample(df[df[:similarity] .< 0.25,:idx], 10000), 0:20))/2
+change_cumsum = cumsum(counts(sample(df[df[:similarity] .< 0.25,:idx], 10000), 0:20))
+stay_mid = sum(counts(sample(df[df[:similarity] .> 0.75,:idx], 10000), 92:102))/2
+stay_cumsum = cumsum(counts(sample(df[df[:similarity] .> 0.75,:idx], 10000), 92:102))
 
-#####
-### TODO: automate this so that a good set of values for the stay and chage
-### thresholds can be determined with little human interferenece
-#####
+sim_stay_suggestion = Int(100)
+sim_change_suggestion = Int(0)
 
-for i in 1:length(stay_cumsum) if stay_cumsum[i] >= stay_mid return i end end
-for i in 1:length(change_cumsum) if change_cumsum[i] >= change_mid return i end end
+for i in length(stay_cumsum):-1:1
+  if stay_cumsum[i] >= stay_mid
+    sim_stay_suggestion = 100 - i
+  end
+end
 
-sim_stay = 85
-sim_change = 25
+for i in 1:length(change_cumsum)
+  if change_cumsum[i] >= change_mid
+    sim_change_suggestion = i
+  end
+end
+
+##### similarity thresholds
+sim_stay = 85 ## or you could set it to sim_stay_suggestion
+sim_stay = sim_stay_suggestion
+sim_change = 25 ## or you could set it to sim_change_suggestion
+sim_change = sim_change_suggestion
+
+
 ###
 # Now let's look at the values to get a clearer understanding
 ###
-
 StatsBase.summarystats(df[df[:similarity] .<= sim_change/100, :gap])
 StatsBase.summarystats(df[df[:similarity] .>= sim_stay/100, :gap])
 change_gap = by(df[df[:similarity] .< sim_change/100, :], :hour, x->median(x[:gap]))
@@ -46,7 +63,6 @@ Stay_gap = by(df[df[:similarity] .> sim_stay/100, :], :hour, x->median(x[:gap]))
 ###
 # Start plotting the results
 ###
-
 using Gadfly # this is basically ggplot2, very similar syntax
 # hours go from 0 to 23, not 1 to 24.
 
@@ -108,23 +124,23 @@ end
 
 ### Plotting
 
-stay_layer = layer(stay_gapmean[stay_gapmean[:day] .== 4, :],
-  x=0:23, y=:x1, ymin=stay_ymins[4,:], ymax=stay_ymaxes[4,:],
+stay_layer = layer(stay_gapmean[stay_gapmean[:day] .== 6, :],
+  x=0:23, y=:x1, ymin=stay_ymins[6,:], ymax=stay_ymaxes[6,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"orange"))
-change_layer = layer(change_gapmean[change_gapmean[:day] .== 4, :],
-  x=0:23, y=:x1, ymin=change_ymins[4,:], ymax=change_ymaxes[4,:],
+change_layer = layer(change_gapmean[change_gapmean[:day] .== 6, :],
+  x=0:23, y=:x1, ymin=change_ymins[6,:], ymax=change_ymaxes[6,:],
   Geom.point, Geom.errorbar,
   Theme(default_color=colorant"purple"))
-smooth_layer = layer(x=0:23, y=stay_ymaxes2[4,:], Geom.smooth(method=:loess, smoothing=0.85))
+smooth_layer = layer(x=0:23, y=stay_ymaxes2[6,:], Geom.smooth(method=:loess, smoothing=0.85))
 P3 = plot(stay_layer, change_layer, smooth_layer, Theme(background_color=colorant"old lace"),
   Guide.title("Player Session Gap Analysis"),
   Guide.XLabel("Hour of Day"),
   Guide.YLabel("Typical Gap Time (Seconds)"),
   Guide.manual_color_key("Legend", ["Same Player", "New Player"], ["orange", "purple"]))
 
-draw(PNG("GapAnalysis_bydayhour_final.png", 6inch, 8inch), P3)
-draw(PNG("GapAnalysis_bydayhour_final.png", 6inch, 8inch), P3)
+draw(PNG("GapAnalysis_bydayhour_WinStar_final.png", 6inch, 8inch), P3)
+draw(PNG("GapAnalysis_bydayhour_Winstar_final.png", 6inch, 8inch), P3)
 
 #####
 ### Achievement Unlocked! <bing!>
@@ -148,4 +164,4 @@ function estimate_session_gap()
   return return_array
 end
 
-Base.writedlm("Array_Midsized.csv", estimate_session_gap(), ",")
+Base.writedlm("Array_Winstar.csv", estimate_session_gap(), ",")

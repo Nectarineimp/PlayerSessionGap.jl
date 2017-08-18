@@ -13,7 +13,7 @@ using DataFrames, DataArrays
 ###
 
 # df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis.csv")
-df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis_Midsized.csv")
+df = readtable("C:/Users/Peter.Mancini/Documents/Datafiles/Gap_Analysis_Durant.csv")
 
 #####
 ### This is critical - this is how we smooth out the results. All of the elements
